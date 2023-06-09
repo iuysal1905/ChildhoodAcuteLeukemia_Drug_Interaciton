@@ -1,4 +1,3 @@
-import cv2
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
@@ -22,20 +21,14 @@ selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
 # Set info message on initial site load
 if len(selected_1) == 0:
     st.text('Lütfen listeden birini seçiniz')
-
-
 elif (selected_1=='Inhibition'):
-
     selected_2 = st.selectbox('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
     if len(selected_2) == 0:
         st.text('Lütfen listeden birini seçiniz')
     elif (selected_2=='Biyoaktivite'):
         selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
-            image = cv2.imread("inhibition_bioactivitiy_class.png")
-            cv2.imshow(image)
-            cv2.waitKey(0)
-            cv2.destroyAllWindows()   
+            print('inhibition_bioactivitiy_class.png')
         elif (selected_3=='LogP'):
             print('inhibition_logp.png')
         elif (selected_3=='MW'):
