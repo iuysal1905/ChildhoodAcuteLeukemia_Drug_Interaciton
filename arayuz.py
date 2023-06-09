@@ -28,35 +28,35 @@ elif (selected_1=='Inhibition'):
     elif (selected_2=='Biyoaktivite'):
         selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
-            print('inhibition_bioactivitiy_class.png')
+            st.image('inhibition_bioactivitiy_class.png')
         elif (selected_3=='LogP'):
-            print('inhibition_logp.png')
+            st.image('inhibition_logp.png')
         elif (selected_3=='MW'):
-            print('inhibition_mw.png')
+            st.image('inhibition_mw.png')
         elif (selected_3=='NumHAcceptors'):
-            print('inhibition_numhacceptors')
+            st.image('inhibition_numhacceptors')
         elif (selected_3=='NumHDonors'):
-            print('inhibition_numhdonors')
+            st.image('inhibition_numhdonors')
         elif (selected_3=='PIC50'):
-            print('inhibition_pic50_bioclass')
+            st.image('inhibition_pic50_bioclass')
     elif (selected_2=='XAI'):
         selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
-            print('inhibition_waterfall.png')
+            st.image('inhibition_waterfall.png')
         elif (selected_4=='Bar'):
-            print('inhibition_bar.png')
+            st.image('inhibition_bar.png')
         elif (selected_4=='BeeSwarm'):
-            print('inhibition_mw.png')
+            st.image('inhibition_mw.png')
         elif (selected_4=='HeatMap'):
-            print('inhibition_heatmap')
+            st.image('inhibition_heatmap')
         elif (selected_4=='Important Features'):
-            print('inhibition_importantfeatures')
+            st.image('inhibition_importantfeatures')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            print('inhibition_rmse.png')
+            st.image('inhibition_rmse.png')
         elif (selected_5=='Time Taken'):
-            print('inhibition_timetaken.png')
+            st.image('inhibition_timetaken.png')
     
 elif (selected_1=='IC50'):
 
@@ -66,35 +66,35 @@ elif (selected_1=='IC50'):
     elif (selected_2=='Biyoaktivite'):
         selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
-            print('ic50_bioactivitiy_class.png')
+            st.image('ic50_bioactivitiy_class.png')
         elif (selected_3=='LogP'):
-            print('ic50_logp.png')
+            st.image('ic50_logp.png')
         elif (selected_3=='MW'):
-            print('ic50_mw.png')
+            st.image('ic50_mw.png')
         elif (selected_3=='NumHAcceptors'):
-            print('ic50_numhacceptors')
+            st.image('ic50_numhacceptors')
         elif (selected_3=='NumHDonors'):
-            print('ic50_numhdonors')
+            st.image('ic50_numhdonors')
         elif (selected_3=='PIC50'):
-            print('ic50_pic50_bioclass')
+            st.image('ic50_pic50_bioclass')
     elif (selected_2=='XAI'):
         selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
-            print('ic50_waterfall.png')
+            st.image('ic50_waterfall.png')
         elif (selected_4=='Bar'):
-            print('ic50_bar.png')
+            st.image('ic50_bar.png')
         elif (selected_4=='BeeSwarm'):
-            print('ic50_mw.png')
+            st.image('ic50_mw.png')
         elif (selected_4=='HeatMap'):
-            print('ic50_heatmap')
+            st.image('ic50_heatmap')
         elif (selected_4=='Important Features'):
-            print('ic50_importantfeatures')
+            st.image('ic50_importantfeatures')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            print('ic50_rmse.png')
+            st.image('ic50_rmse.png')
         elif (selected_5=='Time Taken'):
-            print('ic50_timetaken.png')
+            st.image('ic50_timetaken.png')
 # Footer
 st.markdown(
     """
