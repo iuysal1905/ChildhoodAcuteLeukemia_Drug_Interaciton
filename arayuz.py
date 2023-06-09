@@ -25,6 +25,44 @@ if len(selected_1) == 0:
     st.text('Lütfen listeden birini seçiniz')
 
 # Create network graph when user selects >= 1 item
+elif (selected_1=='Inhibition'):
+
+    selected_2 = st.multiselect('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
+    if len(selected_2) == 0:
+        st.text('Lütfen listeden birini seçiniz')
+    elif (selected_2=='Biyoaktivite'):
+        selected_3 = st.multiselect('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
+        if (selected_3=='Biyoaktivite Sınıfı'):
+            print('inhibition_bioactivitiy_class.png')
+        elif (selected_3=='LogP'):
+            print('inhibition_logp.png')
+        elif (selected_3=='MW'):
+            print('inhibition_mw.png')
+        elif (selected_3=='NumHAcceptors'):
+            print('inhibition_numhacceptors')
+        elif (selected_3=='NumHDonors'):
+            print('inhibition_numhdonors')
+        elif (selected_3=='PIC50'):
+            print('inhibition_pic50_bioclass')
+    elif (selected_2=='XAI'):
+        selected_4 = st.multiselect('Lütfen grafik türlerinden birini seçiniz', sec4)
+        if (selected_4=='WaterFall'):
+            print('inhibition_waterfall.png')
+        elif (selected_4=='Bar'):
+            print('inhibition_bar.png')
+        elif (selected_4=='BeeSwarm'):
+            print('inhibition_mw.png')
+        elif (selected_4=='HeatMap'):
+            print('inhibition_heatmap')
+        elif (selected_4=='Important Features'):
+            print('inhibition_importantfeatures')
+    elif (selected_2=='Model Performansı'):
+        selected_5 = st.multiselect('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
+        if (selected_5=='RMSE'):
+            print('inhibition_rmse.png')
+        elif (selected_5=='Time Taken'):
+            print('inhibition_timetaken.png')
+    
 elif (selected_1=='IC50'):
 
     selected_2 = st.multiselect('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
@@ -62,21 +100,6 @@ elif (selected_1=='IC50'):
             print('ic50_rmse.png')
         elif (selected_5=='Time Taken'):
             print('ic50_timetaken.png')
-    
-    # Take Networkx graph and translate it to a PyVis graph format
-    drug_net.from_nx(G)
-
-    # Generate network with specific layout settings
-    drug_net.repulsion(
-                        node_distance=420,
-                        central_gravity=0.33,
-                        spring_length=110,
-                        spring_strength=0.10,
-                        damping=0.95
-                       )
-
-    
-
 # Footer
 st.markdown(
     """
