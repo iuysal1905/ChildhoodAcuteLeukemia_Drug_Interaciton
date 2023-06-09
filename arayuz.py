@@ -1,6 +1,3 @@
-pip install pillow
-pip install opencv-python
-
 import cv2
 import streamlit as st
 import streamlit.components.v1 as components
