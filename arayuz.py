@@ -1,3 +1,7 @@
+pip install pillow
+pip install opencv-python
+
+import cv2
 import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
@@ -16,22 +20,25 @@ sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Important Features']
 sec5=['RMSE','Time Taken']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
-selected_1 = st.multiselect('Lütfen standart türlerden birini seçiniz', sec1)
+selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
 
 # Set info message on initial site load
 if len(selected_1) == 0:
     st.text('Lütfen listeden birini seçiniz')
 
-# Create network graph when user selects >= 1 item
+
 elif (selected_1=='Inhibition'):
 
-    selected_2 = st.multiselect('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
+    selected_2 = st.selectbox('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
     if len(selected_2) == 0:
         st.text('Lütfen listeden birini seçiniz')
     elif (selected_2=='Biyoaktivite'):
-        selected_3 = st.multiselect('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
+        selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
-            print('inhibition_bioactivitiy_class.png')
+            image = cv2.imread("inhibition_bioactivitiy_class.png")
+            cv2.imshow(image)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()   
         elif (selected_3=='LogP'):
             print('inhibition_logp.png')
         elif (selected_3=='MW'):
@@ -43,7 +50,7 @@ elif (selected_1=='Inhibition'):
         elif (selected_3=='PIC50'):
             print('inhibition_pic50_bioclass')
     elif (selected_2=='XAI'):
-        selected_4 = st.multiselect('Lütfen grafik türlerinden birini seçiniz', sec4)
+        selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
             print('inhibition_waterfall.png')
         elif (selected_4=='Bar'):
@@ -55,7 +62,7 @@ elif (selected_1=='Inhibition'):
         elif (selected_4=='Important Features'):
             print('inhibition_importantfeatures')
     elif (selected_2=='Model Performansı'):
-        selected_5 = st.multiselect('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
+        selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             print('inhibition_rmse.png')
         elif (selected_5=='Time Taken'):
@@ -63,11 +70,11 @@ elif (selected_1=='Inhibition'):
     
 elif (selected_1=='IC50'):
 
-    selected_2 = st.multiselect('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
+    selected_2 = st.selectbox('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
     if len(selected_2) == 0:
         st.text('Lütfen listeden birini seçiniz')
     elif (selected_2=='Biyoaktivite'):
-        selected_3 = st.multiselect('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
+        selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
             print('ic50_bioactivitiy_class.png')
         elif (selected_3=='LogP'):
@@ -81,7 +88,7 @@ elif (selected_1=='IC50'):
         elif (selected_3=='PIC50'):
             print('ic50_pic50_bioclass')
     elif (selected_2=='XAI'):
-        selected_4 = st.multiselect('Lütfen grafik türlerinden birini seçiniz', sec4)
+        selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
             print('ic50_waterfall.png')
         elif (selected_4=='Bar'):
@@ -93,7 +100,7 @@ elif (selected_1=='IC50'):
         elif (selected_4=='Important Features'):
             print('ic50_importantfeatures')
     elif (selected_2=='Model Performansı'):
-        selected_5 = st.multiselect('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
+        selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             print('ic50_rmse.png')
         elif (selected_5=='Time Taken'):
