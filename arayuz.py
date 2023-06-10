@@ -34,11 +34,11 @@ elif (selected_1=='Inhibition'):
         elif (selected_3=='MW'):
             st.image('inhibition_mw.png')
         elif (selected_3=='NumHAcceptors'):
-            st.image('inhibition_numhacceptors')
+            st.image('inhibition_numhacceptors.png')
         elif (selected_3=='NumHDonors'):
-            st.image('inhibition_numhdonors')
+            st.image('inhibition_numhdonors.png')
         elif (selected_3=='PIC50'):
-            st.image('inhibition_pic50_bioclass')
+            st.image('inhibition_pic50_bioclass.png')
     elif (selected_2=='XAI'):
         selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
@@ -48,9 +48,9 @@ elif (selected_1=='Inhibition'):
         elif (selected_4=='BeeSwarm'):
             st.image('inhibition_mw.png')
         elif (selected_4=='HeatMap'):
-            st.image('inhibition_heatmap')
+            st.image('inhibition_heatmap.png')
         elif (selected_4=='Important Features'):
-            st.image('inhibition_importantfeatures')
+            st.image('inhibition_importantfeatures.png')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
@@ -86,9 +86,9 @@ elif (selected_1=='IC50'):
         elif (selected_4=='BeeSwarm'):
             st.image('ic50_mw.png')
         elif (selected_4=='HeatMap'):
-            st.image('ic50_heatmap')
+            st.image('ic50_heatmap.png')
         elif (selected_4=='Important Features'):
-            st.image('ic50_importantfeatures')
+            st.image('ic50_importantfeatures.png')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
