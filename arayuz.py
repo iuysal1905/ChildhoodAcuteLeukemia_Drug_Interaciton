@@ -46,7 +46,7 @@ elif (selected_1=='Inhibition'):
         elif (selected_4=='Bar'):
             st.image('inhibition_bar.png')
         elif (selected_4=='BeeSwarm'):
-            st.image('inhibition_mw.png')
+            st.image('inhibition_beeswarm.png')
         elif (selected_4=='HeatMap'):
             st.image('inhibition_heatmap.png')
         elif (selected_4=='Important Features'):
@@ -72,11 +72,11 @@ elif (selected_1=='IC50'):
         elif (selected_3=='MW'):
             st.image('ic50_mw.png')
         elif (selected_3=='NumHAcceptors'):
-            st.image('ic50_numhacceptors')
+            st.image('ic50_numhacceptors.png')
         elif (selected_3=='NumHDonors'):
-            st.image('ic50_numhdonors')
+            st.image('ic50_numhdonors.png')
         elif (selected_3=='PIC50'):
-            st.image('ic50_pic50_bioclass')
+            st.image('ic50_pic50_bioclass.png')
     elif (selected_2=='XAI'):
         selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
         if (selected_4=='WaterFall'):
@@ -84,7 +84,7 @@ elif (selected_1=='IC50'):
         elif (selected_4=='Bar'):
             st.image('ic50_bar.png')
         elif (selected_4=='BeeSwarm'):
-            st.image('ic50_mw.png')
+            st.image('ic50_beeswarm.png')
         elif (selected_4=='HeatMap'):
             st.image('ic50_heatmap.png')
         elif (selected_4=='Important Features'):
