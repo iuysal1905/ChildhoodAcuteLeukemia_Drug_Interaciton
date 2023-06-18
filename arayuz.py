@@ -97,9 +97,6 @@ elif (selected_1=='IC50'):
             st.image('ic50_timetaken.png')
 # Footer
 st.markdown(
-    """
-    <br>
-
     def open_link(link):
         js = f"window.open('{link}')"  # JavaScript kullanarak linke yönlendirme
         return js
@@ -108,7 +105,8 @@ st.markdown(
         link = "https://iuysal1905-streamlit-leukemia-dnhrmb.streamlit.app"
         js_code = open_link(link)
         st.write("<script>{}</script>".format(js_code), unsafe_allow_html=True)
-    
+    """
+    <br>
     <h6><a href="https://iuysal1905-streamlit-leukemia-dnhrmb.streamlit.app/" target="_blank">Lösemi İlaç-İlaç Etkileşim Ağ Grafiği</a></h6>
     <h6>Disclaimer: This app is NOT intended to provide any form of medical advice or recommendations. Please consult your doctor or pharmacist for professional advice relating to any drug therapy.</h6>
     """, unsafe_allow_html=True
