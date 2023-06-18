@@ -96,10 +96,7 @@ elif (selected_1=='IC50'):
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
 # Footer
-    if st.button("Lösemi İlaç-İlaç Etkileşim Ağ Grafiği"):
-          <h6><a href="https://iuysal1905-streamlit-leukemia-dnhrmb.streamlit.app/" target="_blank"></a></h6>
-
-    st.markdown("Disclaimer: This app is NOT intended to provide any form of medical advice or recommendations. Please consult your doctor or pharmacist for professional advice relating to any drug therapy.")
+    
 st.markdown(
     
     """
