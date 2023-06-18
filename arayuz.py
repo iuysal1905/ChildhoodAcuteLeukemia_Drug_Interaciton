@@ -96,8 +96,7 @@ elif (selected_1=='IC50'):
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
 # Footer
-st.markdown(
-    def open_link(link):
+def open_link(link):
         js = f"window.open('{link}')"  # JavaScript kullanarak linke yönlendirme
         return js
     # Butonu oluştur ve tıklama işlemine bağla
@@ -105,6 +104,8 @@ st.markdown(
         link = "https://iuysal1905-streamlit-leukemia-dnhrmb.streamlit.app"
         js_code = open_link(link)
         st.write("<script>{}</script>".format(js_code), unsafe_allow_html=True)
+st.markdown(
+    
     """
     <br>
     <h6><a href="https://iuysal1905-streamlit-leukemia-dnhrmb.streamlit.app/" target="_blank">Lösemi İlaç-İlaç Etkileşim Ağ Grafiği</a></h6>
