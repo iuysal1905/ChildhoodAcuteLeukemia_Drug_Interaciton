@@ -13,8 +13,8 @@ sec1 = ['IC50','Inhibition']
 sec1.sort()
 sec2=['Biyoaktivite','XAI','Model Performansı']
 sec3=['Biyoaktivite Sınıfı','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
-sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Important Features']
-sec5=['RMSE','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Smiles Gösterimleri']
+sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Decision-1','Decision-2','Force','Scatter','Violin','Important Features']
+sec5=['RMSE','R-Kare','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Smiles Gösterimleri']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
@@ -50,12 +50,25 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_beeswarm.png')
         elif (selected_4=='HeatMap'):
             st.image('inhibition_heatmap.png')
+        elif (selected_4=='Decision-1'):
+            st.image('inhibition_decision_0.png')
+        elif (selected_4=='Decision-2'):
+            st.image('inhibition_decision.png')
+        elif (selected_4=='Force'):
+            st.image('inhibition_force_0.png')
+        elif (selected_4=='Scatter'):
+            st.image('inhibition_scatter.png')
+        elif (selected_4=='Violin'):
+            st.image('inhibition_violin.png')
         elif (selected_4=='Important Features'):
             st.image('inhibition_importantfeatures.png')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             st.image('inhibition_rmse.png')
+            st.image('inhibition_rmse2.png')
+        elif (selected_5=='R-Kare'):
+            st.image('inhibition_r2.png')
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
@@ -94,12 +107,23 @@ elif (selected_1=='IC50'):
             st.image('ic50_beeswarm.png')
         elif (selected_4=='HeatMap'):
             st.image('ic50_heatmap.png')
+        elif (selected_4=='Decision-1'):
+            st.image('ic50_decision_0.png')
+        elif (selected_4=='Decision-2'):
+            st.image('ic50_decision.png')
+        elif (selected_4=='Force'):
+            st.image('ic50_force_0.png')
+        elif (selected_4=='Scatter'):
+            st.image('ic50_scatter.png')
+        elif (selected_4=='Violin'):
+            st.image('ic50_violin.png')
         elif (selected_4=='Important Features'):
             st.image('ic50_importantfeatures.png')
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             st.image('ic50_rmse.png')
+            st.image('ic50_rmse_2.png')
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
