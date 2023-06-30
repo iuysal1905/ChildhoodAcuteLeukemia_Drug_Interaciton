@@ -109,7 +109,6 @@ elif (selected_1=='IC50'):
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
 # Footer
-    
 st.markdown(
     
     """
