@@ -13,7 +13,7 @@ sec1.sort()
 sec2=['Biyoaktivite','XAI','Model Performansı']
 sec3=['Biyoaktivite Sınıfı','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
 sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Important Features']
-sec5=['RMSE','Time Taken']
+sec5=['RMSE','Time Taken','Confusion Matrix','Diğer Performans Metrikleri']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
@@ -95,6 +95,10 @@ elif (selected_1=='IC50'):
             st.image('ic50_rmse.png')
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
+        elif (selected_5=='Confusion Matrix'):
+            st.image('ic50_cfmatrix.png')
+        elif (selected_5=='Time Taken'):
+            st.image('ic50_diger1.png')
 # Footer
     
 st.markdown(
