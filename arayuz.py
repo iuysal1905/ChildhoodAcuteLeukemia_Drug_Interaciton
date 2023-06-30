@@ -58,7 +58,7 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_rmse.png')
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
-         elif (selected_5=='Confusion Matrix'):
+        elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
         elif (selected_5=='Diğer Performans Metrikleri'):
             st.image('diger1.png')
