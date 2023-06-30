@@ -6,14 +6,15 @@ pip.main(["install", "openpyxl"])
 
 # Set header title
 st.title('XAI ile İlaç Yeniden Kullanım Çalışmaları için Benzetim Ortamı')
-
+st.text('Biyoaktivite Standart Türleri Frekans Dağılımı')
+st.image('bioactivite_units.png')
 # Define list of selection options and sort alphabetically
 sec1 = ['IC50','Inhibition']
 sec1.sort()
 sec2=['Biyoaktivite','XAI','Model Performansı']
 sec3=['Biyoaktivite Sınıfı','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
 sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Important Features']
-sec5=['RMSE','Time Taken','Confusion Matrix','Diğer Performans Metrikleri']
+sec5=['RMSE','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Smiles Gösterimleri']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
@@ -57,6 +58,12 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_rmse.png')
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
+         elif (selected_5=='Confusion Matrix'):
+            st.image('cfmatrix.png')
+        elif (selected_5=='Diğer Performans Metrikleri'):
+            st.image('diger1.png')
+        elif (selected_5=='Smiles Gösterimleri'):
+            st.image('smiles.png')
     
 elif (selected_1=='IC50'):
 
@@ -96,9 +103,11 @@ elif (selected_1=='IC50'):
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
-            st.image('ic50_cfmatrix.png')
-        elif (selected_5=='Time Taken'):
-            st.image('ic50_diger1.png')
+            st.image('cfmatrix.png')
+        elif (selected_5=='Diğer Performans Metrikleri'):
+            st.image('diger1.png')
+        elif (selected_5=='Smiles Gösterimleri'):
+            st.image('smiles.png')
 # Footer
     
 st.markdown(
