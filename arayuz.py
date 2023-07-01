@@ -81,7 +81,7 @@ elif (selected_1=='Inhibition'):
             st.image('accuracy_train.png')
         elif (selected_5=='F1 Score'):
             st.image('f1score_train.png')
-        elif (selected_5=='ROC AUC'):
+        elif (selected_5=='ROC-AUC'):
             st.image('roc_auc_train.png')
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
@@ -127,7 +127,7 @@ elif (selected_1=='IC50'):
             st.image('ic50_violin.png')
         elif (selected_4=='Important Features'):
             st.image('ic50_importantfeatures.png')
-    elif (selected_2=='Model Performansı'):
+    elif (selected_2=='Model Performansları'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             st.image('ic50_rmse_2.png')
@@ -146,7 +146,7 @@ elif (selected_1=='IC50'):
             st.image('accuracy_test.png')
         elif (selected_5=='F1 Score'):
             st.image('f1score_test.png')
-        elif (selected_5=='ROC AUC'):
+        elif (selected_5=='ROC-AUC'):
             st.image('roc_auc_test.png')
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
