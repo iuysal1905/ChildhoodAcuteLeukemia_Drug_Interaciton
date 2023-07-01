@@ -11,10 +11,10 @@ st.image('bioactivite_units.png')
 # Define list of selection options and sort alphabetically
 sec1 = ['IC50','Inhibition']
 sec1.sort()
-sec2=['Biyoaktivite','XAI','Model Performansı']
+sec2=['Biyoaktivite','XAI','Model Performansları']
 sec3=['Biyoaktivite Sınıfı','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
 sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Decision-1','Decision-2','Force','Scatter','Violin','Important Features']
-sec5=['RMSE','R-Kare','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Smiles Gösterimleri']
+sec5=['RMSE','R-Kare','Adjusted R-Kare','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Accuracy','F1 Score','ROC-AUC','Smiles Gösterimleri']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
@@ -62,19 +62,27 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_violin.png')
         elif (selected_4=='Important Features'):
             st.image('inhibition_importantfeatures.png')
-    elif (selected_2=='Model Performansı'):
+    elif (selected_2=='Model Performansları'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            st.image('inhibition_rmse.png')
             st.image('inhibition_rmse2.png')
+            st.image('inhibition_rmse.png')
         elif (selected_5=='R-Kare'):
             st.image('inhibition_r2.png')
+        elif (selected_5=='Adjusted R-Kare'):
+            st.image('inhibition_adjusted_rkare.png')
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
         elif (selected_5=='Diğer Performans Metrikleri'):
             st.image('diger1.png')
+        elif (selected_5=='Accuracy'):
+            st.image('accuracy_train.png')
+        elif (selected_5=='F1 Score'):
+            st.image('f1score_train.png')
+        elif (selected_5=='ROC AUC'):
+            st.image('roc_auc_train.png')
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
     
@@ -122,14 +130,24 @@ elif (selected_1=='IC50'):
     elif (selected_2=='Model Performansı'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            st.image('ic50_rmse.png')
             st.image('ic50_rmse_2.png')
+            st.image('ic50_rmse.png')
+        elif (selected_5=='R-Kare'):
+            st.image('ic50_rkare.png')
+        elif (selected_5=='Adjusted R-Kare'):
+            st.image('ic50_adjusted_rkare.png')
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
         elif (selected_5=='Diğer Performans Metrikleri'):
             st.image('diger1.png')
+        elif (selected_5=='Accuracy'):
+            st.image('accuracy_test.png')
+        elif (selected_5=='F1 Score'):
+            st.image('f1score_test.png')
+        elif (selected_5=='ROC AUC'):
+            st.image('roc_auc_test.png')
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
 # Footer
