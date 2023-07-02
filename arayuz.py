@@ -66,10 +66,12 @@ elif (selected_1=='Inhibition'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             st.image('inhibition_rmse2.png')
+            st.write("En başarılı model Gradient Boosted Trees")
             st.image('inhibition_rmse.png')
             st.balloons()
             st.write("En başarılı model DecisionTreeRegressor")
         elif (selected_5=='R-Kare'):
+            st.write("En başarılı model DecisionTreeRegressor")
             st.image('inhibition_r2.png')
         elif (selected_5=='Adjusted R-Kare'):
             st.image('inhibition_adjusted_rkare.png')
@@ -133,11 +135,12 @@ elif (selected_1=='IC50'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
             st.image('ic50_rmse_2.png')
+            st.write("En başarılı model Gradient Boosted Trees")
             st.image('ic50_rmse.png')
             st.balloons()
             st.write("En başarılı model DecisionTreeRegressor")
         elif (selected_5=='R-Kare'):
-            st.image('ic50_rkare.png')
+            st.image('ic50_rkare.png',caption="En başarılı model DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Kare'):
             st.image('ic50_adjusted_rkare.png')
         elif (selected_5=='Time Taken'):
