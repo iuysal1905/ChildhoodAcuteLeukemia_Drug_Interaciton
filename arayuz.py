@@ -65,16 +65,13 @@ elif (selected_1=='Inhibition'):
     elif (selected_2=='Model Performansları'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            st.image('inhibition_rmse2.png')
-            st.write("En başarılı model Gradient Boosted Trees")
-            st.image('inhibition_rmse.png')
-            st.balloons()
-            st.write("En başarılı model DecisionTreeRegressor")
+            st.image('inhibition_rmse2.png',caption="En başarılı model Gradient Boosted Trees")
+            st.image('inhibition_rmse.png', caption="En başarılı model DecisionTreeRegressor")
+            st.balloons() 
         elif (selected_5=='R-Kare'):
-            st.write("En başarılı model DecisionTreeRegressor")
-            st.image('inhibition_r2.png')
+            st.image('inhibition_r2.png', caption="En başarılı model DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Kare'):
-            st.image('inhibition_adjusted_rkare.png')
+            st.image('inhibition_adjusted_rkare.png', caption="En başarılı model DecisionTreeRegressor")
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
@@ -82,11 +79,11 @@ elif (selected_1=='Inhibition'):
         elif (selected_5=='Diğer Performans Metrikleri'):
             st.image('diger1.png')
         elif (selected_5=='Accuracy'):
-            st.image('accuracy_train.png')
+            st.image('accuracy_train.png', caption="DecisionTree en başarılı modellerden birisi olmuştur")
         elif (selected_5=='F1 Score'):
-            st.image('f1score_train.png')
+            st.image('f1score_train.png', caption="DecisionTree en başarılı modellerden birisi olmuştur")
         elif (selected_5=='ROC-AUC'):
-            st.image('roc_auc_train.png')
+            st.image('roc_auc_train.png',caption="DecisionTree en başarılı modellerden birisi olmuştur")
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
     
@@ -134,27 +131,26 @@ elif (selected_1=='IC50'):
     elif (selected_2=='Model Performansları'):
         selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
         if (selected_5=='RMSE'):
-            st.image('ic50_rmse_2.png')
-            st.write("En başarılı model Gradient Boosted Trees")
-            st.image('ic50_rmse.png')
+            st.image('ic50_rmse_2.png',caption="En başarılı model Gradient Boosted Trees")
+            st.image('ic50_rmse.png',caption="En başarılı model DecisionTreeRegressor")
             st.balloons()
-            st.write("En başarılı model DecisionTreeRegressor")
         elif (selected_5=='R-Kare'):
             st.image('ic50_rkare.png',caption="En başarılı model DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Kare'):
-            st.image('ic50_adjusted_rkare.png')
+            st.image('ic50_adjusted_rkare.png',caption="En başarılı model DecisionTreeRegressor")
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
+            st.write("gerçek pozitif sınıfı doğru bir şekilde pozitif olarak tahmin edilen örnek sayısı 3196, gerçek negatif sınıfı yanlış bir şekilde pozitif olarak tahmin edilen örnek sayısı 32, gerçek pozitif sınıfı yanlış bir şekilde negatif olarak tahmin edilen örnek sayısı 14 ve gerçek negatif sınıfı doğru bir şekilde negatif olarak tahmin edilen örnek sayısı 600 olarak elde edilmiştir.")
         elif (selected_5=='Diğer Performans Metrikleri'):
             st.image('diger1.png')
         elif (selected_5=='Accuracy'):
-            st.image('accuracy_test.png')
+            st.image('accuracy_test.png',caption="En başarılı model ExtraTreesRegressor")
         elif (selected_5=='F1 Score'):
-            st.image('f1score_test.png')
+            st.image('f1score_test.png',caption="En başarılı model ExtraTreesRegressor")
         elif (selected_5=='ROC-AUC'):
-            st.image('roc_auc_test.png')
+            st.image('roc_auc_test.png',caption="En başarılı model ExtraTreesRegressor")
         elif (selected_5=='Smiles Gösterimleri'):
             st.image('smiles.png')
 # Footer
