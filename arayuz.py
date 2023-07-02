@@ -67,6 +67,8 @@ elif (selected_1=='Inhibition'):
         if (selected_5=='RMSE'):
             st.image('inhibition_rmse2.png')
             st.image('inhibition_rmse.png')
+            st.balloons()
+            st.write("En başarılı model DecisionTreeRegressor")
         elif (selected_5=='R-Kare'):
             st.image('inhibition_r2.png')
         elif (selected_5=='Adjusted R-Kare'):
@@ -132,6 +134,8 @@ elif (selected_1=='IC50'):
         if (selected_5=='RMSE'):
             st.image('ic50_rmse_2.png')
             st.image('ic50_rmse.png')
+            st.balloons()
+            st.write("En başarılı model DecisionTreeRegressor")
         elif (selected_5=='R-Kare'):
             st.image('ic50_rkare.png')
         elif (selected_5=='Adjusted R-Kare'):
