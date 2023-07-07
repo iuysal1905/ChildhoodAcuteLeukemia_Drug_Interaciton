@@ -138,7 +138,7 @@ elif (selected_1=='IC50'):
             st.image('ic50_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('ic50_rkare.png',caption="The most successful DecisionTreeRegressor")
-        elif (selected_5=='Adjusted R-Sqaure'):
+        elif (selected_5=='Adjusted R-Squarere'):
             st.image('ic50_adjusted_rkare.png',caption="The most successful model DecisionTreeRegressor")
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
