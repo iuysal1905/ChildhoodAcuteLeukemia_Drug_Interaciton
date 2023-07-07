@@ -68,7 +68,7 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_rmse.png', caption="The most successful model DecisionTreeRegressor")
             st.balloons() 
         elif (selected_5=='RE-SE-AE'):
-            st.image('inhibition_rmse2.png', caption="The most successful model GradientBoostedTrees")
+            st.image('inhbt_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('inhibition_r2.png', caption="The most successful model DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Square'):
