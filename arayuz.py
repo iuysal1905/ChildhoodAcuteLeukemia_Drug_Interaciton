@@ -14,7 +14,7 @@ sec1.sort()
 sec2=['Bioactivity','XAI','Model Performances']
 sec3=['Bioactivity Class','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
 sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Decision-1','Decision-2','Force','Scatter','Violin','Important Features']
-sec5=['RMSE','R-Square','Adjusted R-Square','Time Taken','Confusion Matrix','Other Performance Metrics','Accuracy','F1 Score','ROC-AUC','SMILES Images']
+sec5=['RMSE','RE-AE-SE','R-Square','Adjusted R-Square','Time Taken','Confusion Matrix','Other Performance Metrics','Accuracy','F1 Score','ROC-AUC','SMILES Images']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
 selected_1 = st.selectbox('Please select one of the standard types', sec1)
@@ -65,9 +65,10 @@ elif (selected_1=='Inhibition'):
     elif (selected_2=='Model Performances):
         selected_5 = st.selectbox('Please select one of the model evaluation options', sec5)
         if (selected_5=='RMSE'):
-            st.image('inhibition_rmse2.png',caption="The most successful model Gradient Boosted Trees")
             st.image('inhibition_rmse.png', caption="The most successful model DecisionTreeRegressor")
             st.balloons() 
+        elif (selected_5=='RE-SE-AE'):
+            st.image('inhibition_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('inhibition_r2.png', caption="The most successful model DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Square'):
@@ -131,9 +132,10 @@ elif (selected_1=='IC50'):
     elif (selected_2=='Model Performances'):
         selected_5 = st.selectbox('Please select one of the model evaluation options', sec5)
         if (selected_5=='RMSE'):
-            st.image('ic50_rmse_2.png',caption="The most successful model Gradient Boosted Trees")
             st.image('ic50_rmse.png',caption="The most successful DecisionTreeRegressor")
             st.balloons()
+        elif (selected_5=='RE-SE-AE'):
+            st.image('ic50_rmse2.png', caption="The most successful model GradientBoostedTrees"
         elif (selected_5=='R-Square'):
             st.image('ic50_rkare.png',caption="The most successful DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Sqaure'):
