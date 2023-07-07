@@ -67,7 +67,7 @@ elif (selected_1=='Inhibition'):
         if (selected_5=='RMSE'):
             st.image('inhibition_rmse.png', caption="The most successful model DecisionTreeRegressor")
             st.balloons() 
-        elif (selected_5=='RE-SE-AE'):
+        elif (selected_5=='RE-AE-SE'):
             st.image('inhbt_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('inhibition_r2.png', caption="The most successful model DecisionTreeRegressor")
@@ -134,7 +134,7 @@ elif (selected_1=='IC50'):
         if (selected_5=='RMSE'):
             st.image('ic50_rmse.png',caption="The most successful DecisionTreeRegressor")
             st.balloons()
-        elif (selected_5=='RE-SE-AE'):
+        elif (selected_5=='RE-AE-SE'):
             st.image('ic50_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('ic50_rkare.png',caption="The most successful DecisionTreeRegressor")
