@@ -62,7 +62,7 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_violin.png')
         elif (selected_4=='Important Features'):
             st.image('inhibition_importantfeatures.png')
-        elif (selected_2=='Model Performances):
+    elif (selected_2=='Model Performances):
         selected_5 = st.selectbox('Please select one of the model evaluation options', sec5)
         if (selected_5=='RMSE'):
             st.image('inhibition_rmse.png', caption="The most successful model DecisionTreeRegressor")
