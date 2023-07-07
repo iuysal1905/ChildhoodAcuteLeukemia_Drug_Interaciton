@@ -29,7 +29,7 @@ elif (selected_1=='Inhibition'):
     elif (selected_2=='Biyoaktivite'):
         selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
         if (selected_3=='Biyoaktivite Sınıfı'):
-            st.image('inhibition_bioactivitiy_class.png')
+            st.image('inhibition_bioactivity_class.png')
         elif (selected_3=='LogP'):
             st.image('inhibition_logp.png')
         elif (selected_3=='MW'):
