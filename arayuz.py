@@ -135,7 +135,7 @@ elif (selected_1=='IC50'):
             st.image('ic50_rmse.png',caption="The most successful DecisionTreeRegressor")
             st.balloons()
         elif (selected_5=='RE-SE-AE'):
-            st.image('ic50_rmse2.png', caption="The most successful model GradientBoostedTrees"
+            st.image('ic50_rmse2.png', caption="The most successful model GradientBoostedTrees")
         elif (selected_5=='R-Square'):
             st.image('ic50_rkare.png',caption="The most successful DecisionTreeRegressor")
         elif (selected_5=='Adjusted R-Sqaure'):
