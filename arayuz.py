@@ -5,30 +5,30 @@ import pip
 pip.main(["install", "openpyxl"])
 
 # Set header title
-st.title('XAI ile İlaç Yeniden Kullanım Çalışmaları için Benzetim Ortamı')
-st.text('Biyoaktivite Standart Türleri Frekans Dağılımı')
+st.title('Simulation Environment for Drug Reuse Studies with XAI')
+st.text('Frequency Distribution of Bioactivity Standard Types')
 st.image('bioactivite_units.png')
 # Define list of selection options and sort alphabetically
 sec1 = ['IC50','Inhibition']
 sec1.sort()
-sec2=['Biyoaktivite','XAI','Model Performansları']
-sec3=['Biyoaktivite Sınıfı','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
+sec2=['Bioactivity','XAI','Model Performances']
+sec3=['Bioactivity Class','LogP','MW','NumHAcceptors','NumHDonors','PIC50']
 sec4=['WaterFall','Bar','BeeSwarm','HeatMap','Decision-1','Decision-2','Force','Scatter','Violin','Important Features']
-sec5=['RMSE','R-Kare','Adjusted R-Kare','Time Taken','Confusion Matrix','Diğer Performans Metrikleri','Accuracy','F1 Score','ROC-AUC','Smiles Gösterimleri']
+sec5=['RMSE','R-Square','Adjusted R-Square','Time Taken','Confusion Matrix','Other Performance Metrics','Accuracy','F1 Score','ROC-AUC','SMILES Images']
 
 # Implement multiselect dropdown menu for option selection (returns a list)
-selected_1 = st.selectbox('Lütfen standart türlerden birini seçiniz', sec1)
+selected_1 = st.selectbox('Please select one of the standard types', sec1)
 
 # Set info message on initial site load
 if len(selected_1) == 0:
-    st.text('Lütfen listeden birini seçiniz')
+    st.text('Please select one from the list')
 elif (selected_1=='Inhibition'):
-    selected_2 = st.selectbox('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
+    selected_2 = st.selectbox('Please select one of the evaluation types', sec2)
     if len(selected_2) == 0:
-        st.text('Lütfen listeden birini seçiniz')
-    elif (selected_2=='Biyoaktivite'):
-        selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
-        if (selected_3=='Biyoaktivite Sınıfı'):
+        st.text('Please select one from the list')
+    elif (selected_2=='Bioactivity'):
+        selected_3 = st.selectbox('Please select one of the bioactivity types', sec3)
+        if (selected_3=='Bioactiviy Class'):
             st.image('inhibition_bioactivity_class.png')
         elif (selected_3=='LogP'):
             st.image('inhibition_logp.png')
@@ -41,7 +41,7 @@ elif (selected_1=='Inhibition'):
         elif (selected_3=='PIC50'):
             st.image('inhibition_pic50_bioclass.png')
     elif (selected_2=='XAI'):
-        selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
+        selected_4 = st.selectbox('Please select one of the graphic types', sec4)
         if (selected_4=='WaterFall'):
             st.image('inhibition_waterfall.png')
         elif (selected_4=='Bar'):
@@ -62,39 +62,39 @@ elif (selected_1=='Inhibition'):
             st.image('inhibition_violin.png')
         elif (selected_4=='Important Features'):
             st.image('inhibition_importantfeatures.png')
-    elif (selected_2=='Model Performansları'):
-        selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
+    elif (selected_2=='Model Performances):
+        selected_5 = st.selectbox('Please select one of the model evaluation options', sec5)
         if (selected_5=='RMSE'):
-            st.image('inhibition_rmse2.png',caption="En başarılı model Gradient Boosted Trees")
-            st.image('inhibition_rmse.png', caption="En başarılı model DecisionTreeRegressor")
+            st.image('inhibition_rmse2.png',caption="The most successful model Gradient Boosted Trees")
+            st.image('inhibition_rmse.png', caption="The most successful model DecisionTreeRegressor")
             st.balloons() 
-        elif (selected_5=='R-Kare'):
-            st.image('inhibition_r2.png', caption="En başarılı model DecisionTreeRegressor")
-        elif (selected_5=='Adjusted R-Kare'):
-            st.image('inhibition_adjusted_rkare.png', caption="En başarılı model DecisionTreeRegressor")
+        elif (selected_5=='R-Square'):
+            st.image('inhibition_r2.png', caption="The most successful model DecisionTreeRegressor")
+        elif (selected_5=='Adjusted R-Square'):
+            st.image('inhibition_adjusted_rkare.png', caption="The most successful model DecisionTreeRegressor")
         elif (selected_5=='Time Taken'):
             st.image('inhibition_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
-        elif (selected_5=='Diğer Performans Metrikleri'):
+        elif (selected_5=='Other Performance Metrics'):
             st.image('diger1.png')
         elif (selected_5=='Accuracy'):
-            st.image('accuracy_train.png', caption="DecisionTree en başarılı modellerden birisi olmuştur")
+            st.image('accuracy_train.png', caption="DecisionTree has been one of the most successful models")
         elif (selected_5=='F1 Score'):
-            st.image('f1score_train.png', caption="DecisionTree en başarılı modellerden birisi olmuştur")
+            st.image('f1score_train.png', caption="DecisionTree has been one of the most successful models")
         elif (selected_5=='ROC-AUC'):
-            st.image('roc_auc_train.png',caption="DecisionTree en başarılı modellerden birisi olmuştur")
-        elif (selected_5=='Smiles Gösterimleri'):
+            st.image('roc_auc_train.png',caption="DecisionTree has been one of the most successful models")
+        elif (selected_5=='SMILES Images'):
             st.image('smiles.png')
     
 elif (selected_1=='IC50'):
 
-    selected_2 = st.selectbox('Lütfen değerlendirme türlerinden birini seçiniz', sec2)
+    selected_2 = st.selectbox('Please select one of the evaluation types', sec2)
     if len(selected_2) == 0:
-        st.text('Lütfen listeden birini seçiniz')
-    elif (selected_2=='Biyoaktivite'):
-        selected_3 = st.selectbox('Lütfen biyoaktivite türlerinden birini seçiniz', sec3)
-        if (selected_3=='Biyoaktivite Sınıfı'):
+        st.text('Please select one from the list')
+    elif (selected_2=='Bioactivity'):
+        selected_3 = st.selectbox('Please select one of the bioactivity types', sec3)
+        if (selected_3=='Bioactivity Class'):
             st.image('ic50_bioactivitiy_class.png')
         elif (selected_3=='LogP'):
             st.image('ic50_logp.png')
@@ -107,7 +107,7 @@ elif (selected_1=='IC50'):
         elif (selected_3=='PIC50'):
             st.image('ic50_pic50_bioclass.png')
     elif (selected_2=='XAI'):
-        selected_4 = st.selectbox('Lütfen grafik türlerinden birini seçiniz', sec4)
+        selected_4 = st.selectbox('Please select one of the graphic types', sec4)
         if (selected_4=='WaterFall'):
             st.image('ic50_waterfall.png')
         elif (selected_4=='Bar'):
@@ -128,31 +128,31 @@ elif (selected_1=='IC50'):
             st.image('ic50_violin.png')
         elif (selected_4=='Important Features'):
             st.image('ic50_importantfeatures.png')
-    elif (selected_2=='Model Performansları'):
-        selected_5 = st.selectbox('Lütfen model değerlendirme seçeneklerinden birini seçiniz', sec5)
+    elif (selected_2=='Model Performances'):
+        selected_5 = st.selectbox('Please select one of the model evaluation options', sec5)
         if (selected_5=='RMSE'):
-            st.image('ic50_rmse_2.png',caption="En başarılı model Gradient Boosted Trees")
-            st.image('ic50_rmse.png',caption="En başarılı model DecisionTreeRegressor")
+            st.image('ic50_rmse_2.png',caption="The most successful model Gradient Boosted Trees")
+            st.image('ic50_rmse.png',caption="The most successful DecisionTreeRegressor")
             st.balloons()
-        elif (selected_5=='R-Kare'):
-            st.image('ic50_rkare.png',caption="En başarılı model DecisionTreeRegressor")
-        elif (selected_5=='Adjusted R-Kare'):
-            st.image('ic50_adjusted_rkare.png',caption="En başarılı model DecisionTreeRegressor")
+        elif (selected_5=='R-Square'):
+            st.image('ic50_rkare.png',caption="The most successful DecisionTreeRegressor")
+        elif (selected_5=='Adjusted R-Sqaure'):
+            st.image('ic50_adjusted_rkare.png',caption="The most successful model DecisionTreeRegressor")
         elif (selected_5=='Time Taken'):
             st.image('ic50_timetaken.png')
         elif (selected_5=='Confusion Matrix'):
             st.image('cfmatrix.png')
-            st.write("Gerçek pozitif sınıfı doğru bir şekilde pozitif olarak tahmin edilen örnek sayısı 3196, gerçek negatif sınıfı yanlış bir şekilde pozitif olarak tahmin edilen örnek sayısı 32, gerçek pozitif sınıfı yanlış bir şekilde negatif olarak tahmin edilen örnek sayısı 14 ve gerçek negatif sınıfı doğru bir şekilde negatif olarak tahmin edilen örnek sayısı 600 olarak elde edilmiştir.")
-        elif (selected_5=='Diğer Performans Metrikleri'):
-            st.image('diger1.png',caption="Genel olarak, verilen metrikler sonucunda modelin yüksek doğruluk, hassasiyet ve özgünlük değerlerine sahip olduğu görülmektedir")
-            st.write("ACC Macro, tüm sınıfların doğru sınıflandırma oranlarının ortalamasıdır ve 0.98803 olarak hesaplanmıştır. ARI - Ayarlanmış Rand Endeksi, kümeleme algoritmasının gerçek sınıflandırmaya ne kadar yakın olduğunu gösteren bir ölçüttür. Değer ne kadar yüksekse, modelin daha iyi bir kümeleme performansı olduğunu göstermektedir ve 0.94022 olarak hesaplanmıştır. AUNP, pozitif sınıfın altında kalan alanın normalleştirilmiş versiyonudur. Değer ne kadar yüksekse, modelin pozitif sınıfı iyi bir şekilde sınıflandırdığını göstermektedir. 0.9725 olarak hesaplanmıştır. AUNU, negatif sınıfın altında kalan alanın normalleştirilmiş versiyonudur. Değer ne kadar yüksekse, modelin negatif sınıfı iyi bir şekilde sınıflandırdığını göstermektedir ve 0.9725 olarak hesaplanmıştır. F1 Macro - Makro F1 skoru, tüm sınıfların F1 skorlarının ortalamasıdır. F1 skoru, hassasiyet (precision) ve duyarlılık (recall) metriklerinin harmonik ortalaması olarak ifade edilmektedir ve 0.97797 olarak hesaplanmıştır.  Mikro F1 skoru, tüm sınıfların TP, FP ve FN değerlerinin toplamı üzerinden hesaplanan bir F1 skorudur ve 0.98803 olarak hesaplanmıştır. Hamming Loss - Hamming kaybı, doğru sınıflandırılmayan etiketlerin toplam sayısının, toplam etiket sayısına oranıdır ve 0.01197 olarak hesaplanmıştır. Kappa, modelin gerçek sınıfları rastgele tahmin etme olasılığına karşı düzeltilmiş bir sınıflandırma doğruluğu ölçüsüdür. Değer 1'e ne kadar yakınsa, modelin daha iyi bir sınıflandırma performansı olduğunu göstermektedir ve 0.95594 olarak bulunmuştur. Matthews korelasyonu, doğru ve yanlış pozitif/negatif sınıflandırmalar arasındaki dengeli bir ölçüdür. Değer ne kadar yüksekse, modelin daha iyi bir sınıflandırma performansı olduğunu göstermektedir ve 0.95608 olarak elde edilmiştir. A1 (Landis & Koch), Landis ve Koch tarafından önerilen ölçüte göre, modelin sınıfları neredeyse mükemmel bir şekilde sınıflandırdığını göstermektedir.")
+            st.write("The number of samples whose true positive class was correctly predicted as positive was 3196, the number of samples whose true negative class was incorrectly predicted as positive was 32, the number of samples whose true positive class was incorrectly predicted as negative was 14 and the number of samples whose true negative class was correctly predicted as negative was 600.")
+        elif (selected_5=='Other Performance Metrics'):
+            st.image('diger1.png',caption="In general, it is seen that the model has high accuracy, precision and specificity values as a result of the given metrics")
+            st.write("ACC Macro is the average of the correct classification rates of all classes and is calculated as 0.98803. ARI - Adjusted Rand Index is a measure of how close the clustering algorithm is to the true classification. The higher the value, the better clustering performance of the model and it is calculated as 0.94022. AUNP is the normalised version of the area under the positive class. The higher the value, the better the model classifies the positive class. It is calculated as 0.9725. AUNU is the normalised version of the area under the negative class. The higher the value, the better the model classifies the negative class and is calculated as 0.9725. F1 Macro - The Macro F1 score is the average of the F1 scores of all classes. The F1 score is expressed as the harmonic mean of the precision and recall metrics and is calculated as 0.97797.  Micro F1 score is an F1 score calculated as the sum of TP, FP and FN values of all classes and is calculated as 0.98803. Hamming Loss - Hamming loss is the ratio of the total number of labels not correctly classified to the total number of labels and is calculated as 0.01197. Kappa is a measure of classification accuracy corrected for the possibility that the model randomly predicts the true classes. The closer the value is to 1, the better classification performance of the model and was found to be 0.95594. Matthews correlation is a balanced measure between correct and incorrect positive/negative classifications. The higher the value, the better classification performance of the model and it was obtained as 0.95608. A1 (Landis & Koch) indicates that the model classifies classes almost perfectly, according to the criterion proposed by Landis and Koch.")
         elif (selected_5=='Accuracy'):
-            st.image('accuracy_test.png',caption="En başarılı model ExtraTreesRegressor")
+            st.image('accuracy_test.png',caption="The most successful model ExtraTreesRegressor")
         elif (selected_5=='F1 Score'):
-            st.image('f1score_test.png',caption="En başarılı model ExtraTreesRegressor")
+            st.image('f1score_test.png',caption="The most successful model ExtraTreesRegressor")
         elif (selected_5=='ROC-AUC'):
-            st.image('roc_auc_test.png',caption="En başarılı model ExtraTreesRegressor")
-        elif (selected_5=='Smiles Gösterimleri'):
+            st.image('roc_auc_test.png',caption="The most successful ExtraTreesRegressor")
+        elif (selected_5=='SMILES Images'):
             st.image('smiles.png')
 # Footer
 st.markdown(
