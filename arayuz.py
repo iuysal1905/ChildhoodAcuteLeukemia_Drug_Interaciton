@@ -28,7 +28,7 @@ elif (selected_1=='Inhibition'):
         st.text('Please select one from the list')
     elif (selected_2=='Bioactivity'):
         selected_3 = st.selectbox('Please select one of the bioactivity types', sec3)
-        if (selected_3=='Bioactiviy Class'):
+        if (selected_3=='Bioactivity Class'):
             st.image('inhibition_bioactivity_class.png')
         elif (selected_3=='LogP'):
             st.image('inhibition_logp.png')
